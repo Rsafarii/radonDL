@@ -10,7 +10,7 @@ import streamlit as st
 #matplotlib.use('TKAgg',warn=False, force=True)
 from sklearn.compose import make_column_transformer
 from sklearn.preprocessing import OneHotEncoder
-#import tensorflow as tf 
+import tensorflow as tf 
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.layers import Dropout
