@@ -17,7 +17,7 @@ from keras.layers import Dropout
 
 
 #mt= tf.keras.metrics.SparseTopKCategoricalAccuracy(
-    k=4, name='sparse_top_k_categorical_accuracy', dtype=None)
+    #k=4, name='sparse_top_k_categorical_accuracy', dtype=None)
 
  
 st.beta_set_page_config(
