@@ -5,8 +5,8 @@ from sklearn import preprocessing
 from numpy import asarray
 import numpy as np
 import streamlit as st
-import matplotlib.pyplot as plt
-import matplotlib
+#import matplotlib.pyplot as plt
+#import matplotlib
 #matplotlib.use('TKAgg',warn=False, force=True)
 from sklearn.compose import make_column_transformer
 from sklearn.preprocessing import OneHotEncoder
@@ -267,14 +267,14 @@ else :
 			st.set_option('deprecation.showPyplotGlobalUse', False)
 			time.sleep(2)
 			
-			plt.subplots(figsize=(7, 3))
-			plt.plot(FIT_MODEL.history['loss'])
-			plt.title('Model loss')
-			plt.ylabel('Loss')
-			plt.xlabel('Epoch')
-			st.pyplot() 
+			#plt.subplots(figsize=(7, 3))
+			#plt.plot(FIT_MODEL.history['loss'])
+			#plt.title('Model loss')
+			#plt.ylabel('Loss')
+			#plt.xlabel('Epoch')
+			#st.pyplot() 
 			
-			#st.line_chart(FIT_MODEL.history['loss'])
+			st.line_chart(FIT_MODEL.history['loss'])
 
 time.sleep(1)
 st.markdown('** Step 4 :** Model Testing...')
