@@ -30,7 +30,7 @@ st.beta_set_page_config(
   layout="centered",
  initial_sidebar_state="collapsed")
  
-st.title('..........RADON DEEP ANALYSER.......... ')
+st.title('RADON DEEP ANALYSER ')
 col1, col2 = st.beta_columns(2)
 with col1:
 	st.header(" ")
@@ -177,20 +177,21 @@ if condationTEST :
     		test_min_max= min_max_scaler.transform(test[0:1, 0:36])
     		yhat = best_model.predict(test_min_max[0:1, 0:36].reshape(1,36))
     		print('Prediction(Bq/m3)', yhat)
-	st.write('testing data: ')
+	
 	time.sleep(2)
-	st.write('Your selection for Type of Building:', TB)
-	st.write('Your selection for Type of Room:', TR)
-	st.write('Your selection for Floor:', F)
-	st.write('Your selection for Ventilation:', V)
-	st.write('Your selection for Occupation:', O)
-	st.write('Your selection for Simplified Geology:', G)
-	st.write('Your selection for Duration of Measurement:', DM, 'hr')
-	st.write('Your selection for Pressure:', P, 'kPa')
-	st.write('Your selection for Humidity:', H, '%')
-	st.write('Your selection for Temperature :', T, 'C')
+	with st.beta_expander("See  values of  Testing parameters:"):
+		st.write('Your selection for Type of Building:', TB)
+		st.write('Your selection for Type of Room:', TR)
+		st.write('Your selection for Floor:', F)
+		st.write('Your selection for Ventilation:', V)
+		st.write('Your selection for Occupation:', O)
+		st.write('Your selection for Simplified Geology:', G)
+		st.write('Your selection for Duration of Measurement:', DM, 'hr')
+		st.write('Your selection for Pressure:', P, 'kPa')
+		st.write('Your selection for Humidity:', H, '%')
+		st.write('Your selection for Temperature :', T, 'C')
 with st.spinner('Wait for it...'):
-	time.sleep(10)
+	time.sleep(20)
 st.success('Prediction is done!')
 st.write(' ')
 st.write(' ')
