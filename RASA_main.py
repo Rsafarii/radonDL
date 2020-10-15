@@ -195,14 +195,19 @@ if condationTEST :
 with st.spinner('Wait for it...'):
 	time.sleep(20)
 st.success('Prediction is done!')
+st.write(' ')
+st.write(' ')
 
 if TEST :
 	st.sidebar.write('Prediction  is', round(yhat[0], 3), 'Bq/m3')
+	st.write('Prediction  is', round(yhat[0], 3), 'Bq/m3')
 else :
 	st.sidebar.write('Prediction  is', round(yhat[0], 3), 'Bq/m3')
 	st.sidebar.write('Real value  is ', Y_test[TEST], 'Bq/m3')
+	st.write('Prediction  is', round(yhat[0], 3), 'Bq/m3')
+	st.write('Real value  is ', Y_test[TEST], 'Bq/m3')
 #st.balloons()
 st.empty()
 st.write(' ')
 st.write(' ')
-st.sidebar.button('Click here to RUN again!')
+st.button('Click here to RUN again!')
