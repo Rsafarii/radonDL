@@ -34,7 +34,7 @@ st.title('..........RADON DEEP ANALYSER.......... ')
 col1, col2 = st.beta_columns(2)
 with col1:
 	st.header(" ")
-	st.image("1.jpg ", use_column_width=False)
+	st.image("1.jpg", use_column_width=False)
 
 with col2:
 	st.header(" ")
